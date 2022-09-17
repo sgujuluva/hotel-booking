@@ -11,7 +11,7 @@ function Header() {
         <img src={Logo} alt="" />
         </div>
     <div className="middle">
-        <h1>An SA Hotels</h1>
+        <h1>An SA </h1>
         <h3>Grand Luxury hotels</h3>
     </div>
       <div className="right">
