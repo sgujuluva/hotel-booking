@@ -4,7 +4,7 @@ import {Routes, Route} from "react-router-dom";
 import Home from "../src/components/Home";
 import HotelList from "../src/components/HotelList";
 import SingleHotel from "./components/SingleHotel";
-//styles
+
 import './App.css';
 
 function App() {
