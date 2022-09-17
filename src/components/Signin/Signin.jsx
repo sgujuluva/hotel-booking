@@ -1,7 +1,8 @@
 import React from 'react'
 //images
 import Close from "../../images/close.png";
-
+//styles
+import "./signin.scss";
 function Signin() {
   return (
     <div className = "your-account">

@@ -5,6 +5,11 @@ import Logo from "../../images/hotel-logo.png";
 import "./header.scss";
 
 function Header() {
+//function to go to sign in page
+  const handleRegister = () => {
+
+  }
+
   return (
     <header>
         <div className="left">
@@ -12,7 +17,7 @@ function Header() {
         </div>
   
       <div className="right">
-       <button>Register</button>
+       <button onClick = {handleRegister}>Register</button>
       </div>
     </header>
   );
