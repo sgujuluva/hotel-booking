@@ -10,7 +10,7 @@ function Home() {
     <div className="home-page">
          <Header />
          <div className="banner"></div>
-         <Signin/>
+       {/*  <Signin/> */}
         </div>
   )
 }
