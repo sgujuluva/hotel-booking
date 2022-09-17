@@ -1,20 +1,15 @@
 //react lib
 import {Routes, Route} from "react-router-dom";
 //components
-import Logo from "./images/hotel-logo.png"
+import Header from "./components/Header/Header";
+
 //styles
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <img src={Logo} alt="" />
-        <div className="right">
-        <button>Sign up</button>
-        <button>Sign in</button>
-        </div>
-      </header>
+     <Header/>
       <h1>Hello</h1>
       <p>Hello</p>
       <div className="box"></div>
