@@ -1,20 +1,24 @@
 //react lib
 import {Routes, Route} from "react-router-dom";
 //components
-import Home from "../src/components/Home";
-import HotelList from "../src/components/HotelList";
-import SingleHotel from "./components/SingleHotel";
+import Logo from "./images/hotel-logo.png"
 //styles
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/hotels" element={<HotelList/>}/>
-      <Route path="/hotels/:id" element={<SingleHotel/>}/>
-     </Routes>
+      <header>
+        <img src={Logo} alt="" />
+        <div className="right">
+        <button>Sign up</button>
+        <button>Sign in</button>
+        </div>
+      </header>
+      <h1>Hello</h1>
+      <p>Hello</p>
+      <div className="box"></div>
+      <button>Reserve</button>
     </div>
   );
 }
