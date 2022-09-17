@@ -1,21 +1,24 @@
-import React from 'react'
+import React from "react";
 //images
 import Logo from "../../images/hotel-logo.png";
 //styles
-import "./header.scss"
+import "./header.scss";
 
 function Header() {
   return (
-    <div>
-  <header>
+    <header>
+        <div className="left">
         <img src={Logo} alt="" />
-        <div className="right">
-        <button>Sign up</button>
-        <button>Sign in</button>
         </div>
-      </header>
-        </div>
-  )
+    <div className="middle">
+        <h1>An SA Hotels</h1>
+        <h3>Grand Luxury hotels</h3>
+    </div>
+      <div className="right">
+       <button>Sign in</button>
+      </div>
+    </header>
+  );
 }
 
-export default Header
+export default Header;

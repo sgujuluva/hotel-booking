@@ -11,8 +11,7 @@ function App() {
     <div className="App">
      <Header/>
       <h1>Hello</h1>
-      <p>Hello</p>
-      <div className="box"></div>
+       
       <button>Reserve</button>
     </div>
   );
