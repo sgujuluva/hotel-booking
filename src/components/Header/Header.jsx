@@ -12,7 +12,7 @@ function Header() {
         </div>
   
       <div className="right">
-       <button>Sign in</button>
+       <button>Register</button>
       </div>
     </header>
   );

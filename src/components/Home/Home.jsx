@@ -1,0 +1,16 @@
+import React from 'react'
+//components
+import Header from '../Header/Header'
+//styles
+import "./home.scss";
+
+function Home() {
+  return (
+    <div className="home-page">
+         <Header />
+         <div className="banner"></div>
+        </div>
+  )
+}
+
+export default Home
