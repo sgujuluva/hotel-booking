@@ -17,6 +17,7 @@ function TopRooms() {
                        <a> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
                         <h4><ReactStars count={item.rate} size={24} color="#ffc400" /></h4>
+                        <button>Explore</button>
                      </div>
                 ))}
             </div>
@@ -28,6 +29,8 @@ function TopRooms() {
                        <a> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
                         <h4><ReactStars onChange={setCount} count={5} value={item.rate} size={24} color="gray" /></h4>
+                        <button>Explore</button>
+
                      </div>
                 ))}
            </div>
