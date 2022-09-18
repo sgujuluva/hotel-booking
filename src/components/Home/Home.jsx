@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../Footer/Footer';
 
 //components
 import Header from '../Header/Header'
@@ -12,7 +13,8 @@ function Home() {
     <div className="home-page">
          <Header />
          <div className="banner"></div>        
-          <TopRooms/>
+      <TopRooms />
+      <Footer/>
         </div>
   )
 }

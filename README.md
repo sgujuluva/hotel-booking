@@ -13,8 +13,8 @@ Header -- sangee
 baner -- sangee
 calender -- sangee
 
-top 3 Rooms -- anwar
-top 3 rated -- anwar
+top 3 Rooms -- anwar !! Done
+top 3 rated -- anwar !! Done
 
 footer -- anwar
 
