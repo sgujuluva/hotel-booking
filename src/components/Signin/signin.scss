@@ -13,7 +13,7 @@
     min-width: 50%;
     padding: 2%;
     .close {
-       display: flex;
+      display: flex;
       justify-content: space-around;
       align-items: center;
       border: 1px black solid;
@@ -21,58 +21,69 @@
       padding: 1% 0;
       width: 5%;
       cursor: pointer;
-      h2{
+      h2 {
         font-size: 1rem;
       }
-      &:hover{
+      &:hover {
         transform: scale(1.15);
         box-shadow: 3px 3px 5px gray;
       }
     }
 
-
-    .heading{
+    .heading {
       display: flex;
       flex-direction: column;
       align-items: center;
-      h1{
+      h1 {
         margin-bottom: 2%;
       }
-      .accounts{
+      .accounts {
         width: 70%;
         display: flex;
         justify-content: space-between;
-        h3{
+        h3 {
           cursor: pointer;
           width: 47%;
           padding-bottom: 2%;
         }
       }
     }
-    form{
+    form {
       display: flex;
       flex-direction: column;
       width: 70%;
       gap: 1rem;
       margin-top: 2%;
-      
-        .password{
-           display:flex;
-          justify-content: space-between;
-          align-items: center;
-          border:1px solid black;
-          input{
-            font-size: 1rem;
-            padding: 1%;
-            border:none;
-            outline:none;
-          }
-          span{
-            cursor:pointer;
-          }
+
+      .password {
+        position: relative;
+        border: 1px solid black;
+        input {
+          font-size: 1rem;
+          padding: 1%;
+          border: none;
+          outline: none;
+          width: 100%;
         }
-     
-     
+        span {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+      input {
+        font-size: 1rem;
+        padding: 1%;
+        border: none;
+        outline: none;
+        border: 1px solid black;
+      }
+
       button {
         background-color: #0084ff;
         padding: 2%;
@@ -83,16 +94,14 @@
         border: none;
         cursor: pointer;
         outline: none;
-        &:hover{
-        background-color: #0c60af;
-    
+        &:hover {
+          background-color: #0c60af;
         }
       }
     }
   }
 }
 
-
-.underline{
+.underline {
   border-bottom: 3px solid #000;
 }
