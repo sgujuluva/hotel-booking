@@ -44,8 +44,10 @@ const handleToggle = () => {
               {count === 0 && (
                  <form>
                  <input placeholder="E-Mail..." type="email" name="email" />
+                 <div className="password">
                  <input placeholder="Password..." type={type} name="password" />
                  <span onClick={handleToggle}>{icon}</span>
+                 </div>
                  {/* <Link><h4>Forgotten your password?</h4></Link> */}
                  <button>LOGIN</button>
                </form>
@@ -54,8 +56,11 @@ const handleToggle = () => {
                 <form>
                   <input placeholder="Username..." type="text" name="username" id="" />
                  <input placeholder="E-Mail..." type="email" name="email" />
+                 <div className="password">
+                  
                  <input placeholder="Password..." type={type} name="password"  />
                  <span onClick={handleToggle}>{icon}</span>
+                 </div>
                  {/* <Link><h4>Forgotten your password?</h4></Link> */}
               <button>SIGN UP</button>
                </form>
