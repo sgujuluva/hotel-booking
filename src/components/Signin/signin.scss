@@ -12,12 +12,10 @@
     background-color: #fff;
     min-width: 50%;
     .close {
-      //border:2px solid red;
-      //   width: 10%;
-      display: flex;
+       display: flex;
       justify-content: space-around;
       align-items: center;
-      .IX {
+      .close-icon{
         cursor: pointer;
       }
     }

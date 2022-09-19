@@ -1,12 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+
 //images
-import Close from "../../images/close.png";
+
 import { Context } from "../ContextFun";
 //styles
 import "./signin.scss";
 
 function Signin() {
+    
   let { openRegister, setOpenRegister } = useContext(Context);
 
   return (
@@ -15,8 +16,7 @@ function Signin() {
         <div className="container">
           <div className="your-account">
             <div className="close">
-              {/* <img src={Close} alt="" /> */}
-              <h2 className="IX" onClick={() => setOpenRegister(false)}>X</h2>
+              <h2 className="close-icon" onClick={() => setOpenRegister(false)}>X</h2>
               <h2>CLOSE</h2>
             </div>
             <div className="heading">
