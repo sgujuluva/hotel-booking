@@ -10,16 +10,30 @@ import "./signin.scss";
 function Signin() {
     
   let { openRegister, setOpenRegister } = useContext(Context);
+  //state to switch between login and create account
   let [count,setCount] = useState(0)
+  //state to toggle visible and invisible for password
+  const [type,setType] = useState("password");
+  const [icon,setIcon] = useState(AiOutlineEyeInvisible)
+//toggle function
+const handleToggle = () => {
+  if(type === "password"){
+    setIcon(AiOutlineEye);
+    setType("text");
+  }else{
+    setIcon(AiOutlineEyeInvisible);
+    setType("password");
+  }
+}
   return (
     <div className="main-container">
       {openRegister && (
         <div className="container">
           <div className="your-account">
             <div onClick={() => setOpenRegister(false)} className="close">
-              {/* <img src={Close} alt="" /> */}
+           
               <h2 className="IX" >X</h2>
-              {/* <h2>CLOSE</h2> */}
+            
             </div>
             <div className="heading">
               <h1>Your Account</h1>
@@ -30,7 +44,8 @@ function Signin() {
               {count === 0 && (
                  <form>
                  <input placeholder="E-Mail..." type="email" name="email" />
-                 <input placeholder="Password..." type="password" name="password" />
+                 <input placeholder="Password..." type=/* "password" */{type} name="password" />
+                 <span onClick={handleToggle}>{icon}</span>
                  {/* <Link><h4>Forgotten your password?</h4></Link> */}
                  <button>LOGIN</button>
                </form>
@@ -39,7 +54,7 @@ function Signin() {
                 <form>
                   <input placeholder="Username..." type="text" name="username" id="" />
                  <input placeholder="E-Mail..." type="email" name="email" />
-                 <input placeholder="Password..." type="password" name="password" />
+                 <input placeholder="Password..." type="password" name="password"  />
                  {/* <Link><h4>Forgotten your password?</h4></Link> */}
               <button>SIGN UP</button>
                </form>
