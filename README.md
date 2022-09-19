@@ -13,8 +13,8 @@ Header -- sangee
 baner -- sangee
 calender -- sangee
 
-top 3 Rooms -- anwar
-top 3 rated -- anwar
+top 3 Rooms -- anwar !! Done
+top 3 rated -- anwar !! Done
 
 footer -- anwar
 
@@ -22,7 +22,7 @@ footer -- anwar
 sign in - up -- sangee
  <!-- ============================== Single page ================== -->
 Single page here we will have the payment  -- anwar Note in the payment do it together
-Data.js -- anwar
+Data.js -- anwar  !! Done
 
 
 
