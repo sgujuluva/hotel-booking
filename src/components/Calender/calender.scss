@@ -1,0 +1,29 @@
+.calender {
+  .calender-container {
+    background-color: #ffc400;
+    margin: 0 auto 3% auto;
+    width: 70%;
+    padding: 2%;
+    box-shadow: 3px 3px 5px black;
+    form {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: 40%;
+        padding: 0.5%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #000;
+      }
+      button {
+        width: 10%;
+        border: none;
+        padding: 0.5% 0;
+        outline: none;
+        background-color: #0084ff;
+        color: white;
+        border-radius: 5px;
+      }
+    }
+  }
+}

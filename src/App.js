@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import Signin from "./components/Signin/Signin";
 import Header from "./components/Header/Header";
 import Rooms from "./components/Rooms/Rooms";
+import Single from "./components/Single/Single";
 
 
 //styles
@@ -17,6 +18,7 @@ function App() {
      <Routes>
       <Route path="/" element = { <Home/>  }/>
       <Route path="/rooms" element = { <Rooms/>  }/>
+      <Route path="/single/:id" element = { <Single/>  }/>
      </Routes>
 
      

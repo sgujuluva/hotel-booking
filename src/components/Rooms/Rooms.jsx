@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ReactStars from 'react-rating-stars-component';
+import { Link } from 'react-router-dom';
 import { data } from "../../data.js"
 //styles
 import "./rooms.scss";
@@ -15,7 +16,7 @@ function Rooms() {
                        <a> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
                         <h4><ReactStars count={item.rate} size={24} color="#ffc400" /></h4>
-                        <button>Explore</button>
+                        <Link to = {`/single/${item.id}`}><button>Explore</button></Link>
                      </div>
                 ))}
             </div>
