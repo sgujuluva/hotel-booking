@@ -12,7 +12,8 @@ import "./home.scss";
 function Home() {
   return (
     <div className="home-page">
-         <Header />
+   
+         <Signin/>    
          <div className="banner"></div>     
          <Calender/>   
       <TopRooms />

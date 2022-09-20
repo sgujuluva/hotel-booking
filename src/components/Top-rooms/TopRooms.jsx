@@ -6,8 +6,7 @@ function TopRooms() {
     let [dataState, setDataState] = useState(data)
     let filterTopStars = dataState.filter(item => item.rate === 5)
     let filterKingRooms = dataState.filter(item => item.title === "king")
-    let [count, setCount] = useState("")
-    console.log(count);
+   
     return (
       <div className='topRooms'>
             <h1>Top Rooms 5 Stars</h1>
@@ -28,7 +27,7 @@ function TopRooms() {
                      <div className='card' key={i}>
                        <a> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
-                        <h4><ReactStars onChange={setCount} count={5} value={item.rate} size={24} color="gray" /></h4>
+                        <h4><ReactStars  count={5} value={item.rate} size={24} color="gray" /></h4>
                         <button>Explore</button>
 
                      </div>
