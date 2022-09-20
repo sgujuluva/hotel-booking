@@ -1,6 +1,41 @@
 .single{
     height: 100vh;
     .single-container{
-        height: 100vh;
+        height: 100%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .single-info{
+            height: 50%;
+            position:absolute;
+            top: 25%;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background-color: rgba(255, 255, 255, 0.723);
+            padding: 2%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+            button{
+               width: 50%;
+               padding: 2% 0%; 
+               border-radius: 5px;
+               margin-top: 5%;
+               background-color:#0084ff;
+               border:none;
+               outline: none;
+               color:white;
+               font-weight: bold;
+               box-shadow: 3px 3px 5px black;
+            }
+            p{
+                text-align: center;
+            }
+        }
     }
 }

@@ -13,10 +13,10 @@ function Rooms() {
            <div className='roomsContainer'>
                 {dataState.map((item, i) => (
                      <div className='rooms-card' key={i}>
-                       <a> <img src={item.img} alt="" /></a>
+                       <a className='anchor-img'> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
                         <h4><ReactStars count={item.rate} size={24} color="#ffc400" /></h4>
-                        <Link to = {`/single/${item.id}`}><button>Explore</button></Link>
+                        <Link  to = {`/single/${item.id}`}><button>Explore</button></Link>
                      </div>
                 ))}
             </div>
