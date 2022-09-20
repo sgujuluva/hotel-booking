@@ -35,14 +35,13 @@ let navigate = useNavigate()
 
   let handleExplore = (item) => {
     navigate(`/single/${item.id}`)
-
-
 }
 
   return (
     <div className='rooms'>
       
-   <h1>Rooms</h1>
+      <h1>Rooms</h1>
+      <h2>{`From ${selectDate.from} – To ${selectDate.to}` }</h2>
            <div className='roomsContainer'>
                 {dataState.map((item, i) => (
                      <div className='rooms-card' key={i}>
