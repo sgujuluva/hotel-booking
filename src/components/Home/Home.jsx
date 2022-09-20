@@ -1,4 +1,5 @@
 import React from 'react'
+import Calender from '../Calender/Calender';
 import Footer from '../Footer/Footer';
 
 //components
@@ -12,7 +13,8 @@ function Home() {
   return (
     <div className="home-page">
          <Header />
-         <div className="banner"></div>        
+         <div className="banner"></div>     
+         <Calender/>   
       <TopRooms />
       <Footer/>
         </div>
