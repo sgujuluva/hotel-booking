@@ -28,14 +28,16 @@ console.log(selectDate)
             placeholder="Enter the Start Date..."
             type="date"
             name="from"
-         value={selectDate.from}
+            value={selectDate.from}
+            required
           />
           <input
             onChange={handleChange}
             placeholder="Enter the End Date..."
             type="date"
             name="to"
-         value={selectDate.to}
+            value={selectDate.to}
+            required
           />
           <button>Show</button>
         </form>

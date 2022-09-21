@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 //images
 import Logo from "../../images/hotel-logo.png";
 import { Context } from "../ContextFun";
@@ -17,7 +17,7 @@ function Header() {
   return (
     <header>
       <div className="left">
-        <img src={Logo} alt="" />
+       <Link to={"/"}> <img src={Logo} alt="" /></Link>
       </div>
 
       <div className="right">

@@ -22,10 +22,11 @@
             min-height: fit-content;
             display: flex;
             flex-direction: column;
+            align-items: center;
             justify-content: space-between;
             border-radius: 5px;
             box-shadow:5px 5px 5px black ;
-           a{
+           .a-img{
                display: flex;
                height: 100%;
                img{
@@ -37,10 +38,16 @@
             h3{
                 padding: 2% 0;
             }
+          .link-btn{
+              display: flex;
+              width: 80%;
+              justify-content: center;
+              text-decoration: none;
+              margin-top: 5%;
             button {
                 background-color: #0084ff;
                 padding: 2%;
-                min-width: 40%;
+                min-width: 100%;
                 border-radius: 5px;
                 color: white;
                 font-size: 1rem;
@@ -48,12 +55,12 @@
                 border: none;
                 cursor: pointer;
                 outline: none;
-                margin-top: 5%;
                 &:hover{
                 background-color: #0c60af;
             
                 }
               }
+          }
          
         }
     }

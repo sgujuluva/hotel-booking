@@ -3,8 +3,8 @@ export let data = [
     {
         title: "single",
         price: 60,
-        from: "",
-        to: "",
+        from: "2022-09-20",
+        to: "2022-09-25",
         img: "https://cdn.pixabay.com/photo/2016/03/28/09/34/bedroom-1285156_960_720.jpg",
         kids: "",
         adults:"",

@@ -8,6 +8,14 @@
     color: white;
     border-radius: 5px;
   }
+  h2 {
+    background-color: green;
+    padding: 1%;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 2%;
+  }
   .roomsContainer {
     display: flex;
     justify-content: space-between;
@@ -23,6 +31,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: center;
       border-radius: 5px;
       box-shadow: 5px 5px 5px black;
       .anchor-img {
@@ -37,13 +46,15 @@
       h3 {
         padding: 2% 0;
       }
-      a {
-        display: flex;
-        text-decoration: none;
+      h5{
+        color: red;
+      }
+     
         button {
           background-color: #0084ff;
+          width: 100%;
           padding: 2%;
-          min-width: 40%;
+          margin-top: 5%;
           border-radius: 5px;
           color: white;
           font-size: 1rem;
@@ -51,12 +62,16 @@
           border: none;
           cursor: pointer;
           outline: none;
-          margin-top: 5%;
           &:hover {
             background-color: #0c60af;
           }
+          &:disabled{
+            background-color: gray;
+            color: red;
+            cursor: not-allowed;
+          }
         }
-      }
+      
     }
   }
 }
