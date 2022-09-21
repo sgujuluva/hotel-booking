@@ -27,7 +27,7 @@ function TopRooms() {
                      <div className='card' key={i}>
                        <a> <img src={item.img} alt="" /></a>
                         <h3>{item.title[0].toUpperCase() + item.title.slice(1)} Room</h3>
-                        <h4><ReactStars  count={5} value={item.rate} size={24} color="gray" /></h4>
+                        <h4><ReactStars  count={5} value={item.rate} size={24} color="#808080" /></h4>
                         <button>Explore</button>
 
                      </div>
