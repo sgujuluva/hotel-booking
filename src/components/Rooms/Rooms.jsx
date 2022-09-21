@@ -13,24 +13,7 @@ let navigate = useNavigate()
 
 
   let [dataState, setDataState] = useState(data)
-  let reserved = dataState.filter(item => !item.from >= selectDate.from && !item.to <= selectDate.to)
-  console.log(reserved);
-  // let handleReserved = () => {
-  //   dataState.map(item => {
-  //     if (selectDate.from < item.from) {
-  //       setReservedText(`This Room is available till ${item.from}`)
-  //     } else if (selectDate.from > item.from) {
-  //       setReservedText(`This Room is Reserved till ${item.to}`)        
-  //     } else if (selectDate.to < item.to) {
-  //       setReservedText(`This Room is Reserved till ${item.to}`)                
-  //     } else if (selectDate.to > item.to) {
-  //       setReservedText(`This Room is Available from ${item.to}`)                
-  //     } else {
-  //       setReservedText(`This Room is Available `)                        
-  //     }
-  //   })
-  // }
-  
+
   
 
   let handleExplore = (item) => {
