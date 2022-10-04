@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 //icons
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 //images
 
 import { Context } from "../ContextFun";
+import axios from "axios";
 //styles
 import "./signin.scss";
 
@@ -12,8 +13,50 @@ function Signin() {
   //state to switch between login and create account
   let [count, setCount] = useState(0);
   //state to toggle visible and invisible for password
-    let [visible, setVisible] = useState(false);
- 
+  let [visible, setVisible] = useState(false);
+
+  let [signUp, setSignUp] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  let [signIn , setSignIn] = useState({
+    email:"",
+    password:""
+  })
+  let [users, setUsers] = useState([]);
+
+  let handleChangeSignUp = (e) => {
+    setSignUp({ ...signUp, [e.target.name]: e.target.value });
+  };
+  let handleSubmitSignUp = (e) => {
+    e.preventDefault();
+    axios.post("http://localhost:4000/user/create", signUp);
+    alert("Sign up is successfully done")
+    setSignUp({
+      username: "",
+      email: "",
+      password: "",
+    });
+  };
+  let getUser = async () => {
+    let res = await fetch("http://localhost:4000/user/get");
+    let json = await res.json();
+    return json;
+  };
+
+  useEffect(() => {
+    getUser().then((result) => setUsers(result));
+  });
+
+  let handleChangeSignIn = (e) => {
+    setSignIn({...signIn,[e.target.name]:e.target.value})
+  }
+  let handleSubmitSignIn  = (e) => {
+    e.preventDefault()
+    if(users.some(item => item.email === signUp.email && item.password === signUp.password))  
+  }
+
   return (
     <div className="main-container">
       {openRegister && (
@@ -55,20 +98,31 @@ function Signin() {
                   <button>LOGIN</button>
                 </form>
               )}
+              {/* ============================================================================== */}
               {count === 1 && (
-                <form>
+                <form onSubmit={handleSubmitSignUp}>
                   <input
+                    onChange={handleChangeSignUp}
                     placeholder="Username..."
                     type="text"
                     name="username"
                     id=""
+                    value={signUp.username}
                   />
-                  <input placeholder="E-Mail..." type="email" name="email" />
+                  <input
+                    onChange={handleChangeSignUp}
+                    placeholder="E-Mail..."
+                    type="email"
+                    name="email"
+                    value={signUp.email}
+                  />
                   <div className="password">
                     <input
+                      onChange={handleChangeSignUp}
                       placeholder="Password..."
                       type={visible ? "password" : "text"}
                       name="password"
+                      value={signUp.password}
                     />
                     <span onClick={() => setVisible(!visible)}>
                       {" "}
