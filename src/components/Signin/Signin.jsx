@@ -4,11 +4,13 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 //images
 
 import { Context } from "../ContextFun";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 //styles
 import "./signin.scss";
 
 function Signin() {
+  let navigate = useNavigate()
   let { openRegister, setOpenRegister } = useContext(Context);
   //state to switch between login and create account
   let [count, setCount] = useState(0);
@@ -54,9 +56,17 @@ function Signin() {
   }
   let handleSubmitSignIn  = (e) => {
     e.preventDefault()
-    if(users.some(item => item.email === signUp.email && item.password === signUp.password))  
+    if (users.some(item => item.email === signIn.email && item.password === signIn.password)) {
+      alert(`Welcome ${signIn.email}, Enjoy exploring our hotel `)
+      setSignIn({
+        email: "",
+        password:""
+      })
+    } else {
+      alert("This user is not exist !")
+    }
   }
-
+  console.log(users);
   return (
     <div className="main-container">
       {openRegister && (
@@ -82,13 +92,15 @@ function Signin() {
                 </h3>
               </div>
               {count === 0 && (
-                <form>
-                  <input placeholder="E-Mail..." type="email" name="email" />
+                <form onSubmit={handleSubmitSignIn}>
+                  <input value={signIn.email} placeholder="E-Mail..." type="email" name="email" onChange={handleChangeSignIn}/>
                   <div className="password">
                     <input
                       placeholder="Password..."
                       type={visible ? "password" : "text"}
                       name="password"
+                      onChange={handleChangeSignIn}
+                      value={signIn.password}
                     />
                     <span onClick={() => setVisible(!visible)}>
                       {!visible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />}
